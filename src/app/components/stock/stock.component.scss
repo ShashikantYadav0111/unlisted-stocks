@@ -1,0 +1,21 @@
+.stock-card{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+.stock-info{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    font-weight: 500;
+    color: wheat;
+    border-left:5px solid wheat ;
+    border-right:5px solid wheat ;
+    padding: 0rem 1rem;
+}

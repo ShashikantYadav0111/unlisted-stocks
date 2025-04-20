@@ -1,0 +1,34 @@
+<footer class="footer-container">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <div class="logo">
+                <h2>Unlisted Stocks</h2>
+                <p>Your trusted platform for unlisted stocks.</p>
+            </div>
+            <br>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i> <span></span></a>
+                <a href="#"><i class="fab fa-x-twitter"></i> <span></span></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i> <span></span></a>
+                <a href="#"><i class="fab fa-instagram"></i> <span></span></a>
+              </div>
+        </div>      
+        <div class="footer-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li [routerLink]="['/']"><h3>Home</h3></li>
+                <li [routerLink]="['/screener']"><h3>Screener</h3></li>
+                <li [routerLink]="['/contact']"><h3>Contact</h3></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h2>Contact Details</h2>
+            <h3><span class="material-icons">call</span> : {{contactInfo.phoneNo}}</h3>
+            <h3><span class="material-icons">email</span> : {{contactInfo.email}}</h3>
+            <!-- <h3><span class="material-icons">location_on</span> : {{contactInfo.address}}</h3> -->
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 InvestCom. All rights reserved.</p>
+    </div>
+</footer>

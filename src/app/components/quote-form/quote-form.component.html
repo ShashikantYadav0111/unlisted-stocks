@@ -1,0 +1,44 @@
+<!-- Trigger Button -->
+<button (click)="showForm = true" class="btn">Get Quote</button>
+
+<!-- Form Modal -->
+<div *ngIf="showForm" class="overlay">
+  <div class="form-popup">
+    <h2>Please Fill The Form</h2>
+    <form action="https://formsubmit.co/crowmaestro.0111@gmail.com" method="POST">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Enter Stock Quantity:</label>
+          <input type="number" name="quantity"/>
+        </div>
+        <div class="form-group">
+          <label>Buy or Sell:</label>
+          <select name="tradeAction">
+            <option value="">--Please Select--</option>
+            <option value="buy">Buy</option>
+            <option value="sell">Sell</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Full Name:</label>
+          <input type="text" name="fullname"/>
+        </div>
+        <div class="form-group">
+          <label>Contact Number:</label>
+          <input type="tel" name="phoneNo"/>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Email:</label>
+          <input type="email" name="email"/>
+        </div>
+      </div>
+
+      <div class="form-buttons">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="button" (click)="showForm = false" class="close-btn">Close</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<h1>Testimonials</h1>
+<h2>See what our customers has to say</h2>
+<div class="testimonial-main">
+    <div class="testimonial-container">
+        <div *ngFor="let t of testimonials" class="testimonial-card">
+            <p class="testimonial-text">"{{ t.message }}"</p>
+            <div class="testimonial-author">
+                <div>
+                    <h4>{{ t.name }}</h4>
+                    <p>{{ t.title }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonial-container">
+        <div *ngFor="let t of testimonials" class="testimonial-card">
+            <p class="testimonial-text">"{{ t.message }}"</p>
+            <div class="testimonial-author">
+                <div>
+                    <h4>{{ t.name }}</h4>
+                    <p>{{ t.title }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

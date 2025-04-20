@@ -1,0 +1,91 @@
+<input type="text" placeholder="Search stocks..." [(ngModel)]="searchQuery" (input)="applyFilters()"
+  class="search-box" />
+  <div class="hot-deals-banner">
+    GET HOT DEALS At best price
+  </div>
+<div class="screener-container">
+  <div class="filters">
+    <h2>Sector</h2>
+    <br>
+    <div class="filter-group">
+      <label *ngFor="let sector of allSectors">
+        {{ sector }}
+        <input type="checkbox" (change)="toggleSelection(sector, selectedSectors)" />
+      </label>
+    </div>
+  </div>
+
+  <div class="table" style="margin: 0px auto;">
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th>Stock Name</th>
+          <th>Current Price</th>
+          <th>M.Cap</th>
+          <th>P/E</th>
+          <th>roce</th>
+          <th>roe</th>
+          <th>3yr REV cagr</th>
+          <th>Quote</th>
+
+        </tr>
+      </thead>
+      <tbody class="table-body">
+        <tr *ngFor="let stock of filteredStocks">
+          <td>{{ stock.name }}</td>
+          <td>₹{{ stock.price }}</td>
+          <td>₹{{ stock.mcap }}</td>
+          <td>{{ stock.pe }}</td>
+          <td>{{ stock.roce || 'NA' }}</td>
+          <td>{{ stock.roe }}</td>
+          <td>{{ stock.three_yr_rev_charge }}</td>
+          <td><button (click)="showForm = true" class="btn">Get Quote</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- Trigger Button -->
+
+
+<!-- Form Modal -->
+<div *ngIf="showForm" class="overlay">
+  <div class="form-popup">
+    <h2>Please Fill The Form</h2>
+    <form action="https://formsubmit.co/crowmaestro.0111@gmail.com" method="POST">
+      <div class="form-grid"> 
+        <div class="form-group">
+          <label>Enter Stock Quantity:</label>
+          <input type="number" name="quantity" required/>
+        </div>
+        <div class="form-group">
+          <label>Buy or Sell:</label>
+          <select name="tradeAction">
+            <option value="">--Please Select--</option>
+            <option value="buy">Buy</option>
+            <option value="sell">Sell</option>
+          </select>
+        </div>
+
+        <div class="form-group" >
+          <label>Full Name:</label>
+          <input type="text" name="fullname" required/>
+        </div>
+        <div class="form-group">
+          <label>Contact Number:</label>
+          <input type="tel" name="phoneNo" required/>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Email:</label>
+          <input type="email" name="email" placeholder="Optional"/>
+        </div>
+      </div>
+
+      <div class="form-buttons">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="button" (click)="showForm = false" class="close-btn">Close</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+.section-container {
+    padding: 5rem 5rem;
+    background: linear-gradient(135deg, #ffffff, #f3f4f6);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.section-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-body-text {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #34495e;
+    margin-right: 20px;
+}
+
+.section-body-text span {
+    color: var(--secondary-color);
+    font-weight: bolder;
+}
+
+.section-body-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.section-body-image img {
+    max-width: 95%;
+    height: 25rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-body-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .section-heading {
+        font-size: 3rem;
+    }
+
+    .section-body {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .section-body-text {
+        font-size: 1.8rem;
+        margin-right: 10px;
+    }
+
+    .section-body-image img {
+        height: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 2.5rem;
+    }
+
+    .section-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-body-text {
+        font-size: 1.5rem;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .section-body-image img {
+        height: 18rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .section-body-text {
+        font-size: 1.2rem;
+    }
+
+    .section-body-image img {
+        height: 15rem;
+    }
+}
