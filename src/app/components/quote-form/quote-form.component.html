@@ -5,6 +5,12 @@
 <div *ngIf="showForm" class="overlay">
   <div class="form-popup">
     <h2>Please Fill The Form</h2>
+    <h3 style="color: var(--secondary-color);">Reach out to us Directly</h3>
+    <div class="footer-section">
+      <p><i class="fas fa-envelope"></i> {{contactInfo2.email}}</p>
+      <p><i class="fas fa-phone"></i> {{contactInfo2.phoneNo}}</p>
+    </div>
+
     <form action="https://formsubmit.co/crowmaestro.0111@gmail.com" method="POST">
       <div class="form-grid">
         <div class="form-group">

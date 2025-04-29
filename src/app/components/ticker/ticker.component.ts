@@ -101,14 +101,10 @@ export class TickerComponent {
   stocks2: any[] = [];
 
   constructor(private http: HttpClient) {
-    this.http.get('assets/screener.csv', { responseType: 'text' }).subscribe(csvData => {
-      Papa.parse(csvData, {
-        header: true,
-        skipEmptyLines: true,
-        complete: (result) => {
-          this.stocks2 = result.data;
-        }
-      });
+    this.http.get<any[]>('https://stockapp-backend-1at5.onrender.com/stock/get-all').subscribe(response => {
+      
+          this.stocks2 = response;
+
     });
   }
 }

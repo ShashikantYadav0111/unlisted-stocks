@@ -13,6 +13,22 @@ input {
   }
 }
 
+
+.footer-section p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #525050;
+}
+
+.footer-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .screener-container {
   display: flex;
   flex-direction: row;
@@ -20,7 +36,10 @@ input {
   padding: 2rem;
   width: 80%;
   margin: 0rem auto;
-  height: 25rem;
+  height: 35rem;
+  // border: 1px solid black;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.19);
+  border-radius: 10px;
 
 }
 
@@ -29,8 +48,8 @@ input {
   overflow: scroll;
   overflow-x: hidden;
 
-  max-height: 30rem;
-  width: 70%;
+  min-height: 30rem;
+  // width: 70%;
 }
 .stock-table {
   border-collapse: collapse;
@@ -155,7 +174,7 @@ input {
 .filter-group{
   overflow: scroll;
   width: 20rem;
-  max-height: 20rem;
+  max-height: 28rem;
   overflow-x: hidden;
   padding: 1rem;
   border-left: 5px solid black;
@@ -409,5 +428,15 @@ input {
   100% {
     transform: scale(1);
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+  }
+}
+
+.disclaimer{
+  padding: 1REM;
+  P{
+      padding: 1REM;
+      border-left:5px solid rgb(255, 0, 0);
+      background-color: rgba(0,0,0,0.09);
+      color: rgb(111, 109, 109);
   }
 }

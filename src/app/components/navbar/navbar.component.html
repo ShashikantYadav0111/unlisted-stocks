@@ -10,13 +10,10 @@
     <div class="nav-links" [class.active]="isMenuOpen" (click)="closeMenu()">
         <ul>
             <li (click)="navigateTo('')">Home</li>
-            <!-- <li (click)="navigateTo('about')"> About</li> -->
+            <li (click)="navigateTo('about')"> About</li>
             <li (click)="navigateTo('screener')">Screener</li>
             <li (click)="navigateTo('contact')">Contact</li>
             <li (click)="navigateTo('news')">News</li>
         </ul>
-    </div>
-    <div class="login-button disable" (click)="navigateTo('contact')">
-       Register
     </div>
 </div>

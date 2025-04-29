@@ -8,6 +8,8 @@ import { NewsComponent } from '../../components/news/news.component';
 import { TrendingComponent } from '../../components/trending/trending.component';
 import { DisclaimerComponent } from '../../components/disclaimer/disclaimer.component';
 import { QuoteFormComponent } from "../../components/quote-form/quote-form.component";
+import { FloatingWhatsappComponent } from "../../components/floating-whatsapp/floating-whatsapp.component";
+import { WhyComponent } from '../../components/why/why.component';
 
 @Component({
   selector: 'app-home',
@@ -19,12 +21,18 @@ import { QuoteFormComponent } from "../../components/quote-form/quote-form.compo
     TrendingComponent,
     TickerComponent,
     DisclaimerComponent,
-    QuoteFormComponent
+    FloatingWhatsappComponent,
+    WhyComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  contactInfo2 = { 
+    phoneNo:'+91 9814003436',
+    email:'unlistedequities@gmail.com',
+    address:''
+  }
   contentData = [
     {
       heading: '🔍 What are Unlisted Stocks?',
@@ -52,6 +60,7 @@ export class HomeComponent {
   ];
   bannerNo: number = 1;
   imageUrl = `./backgrounds/background${this.bannerNo}.png`;
+  imageUrl2 = 'photo2.png';
 
   changeBanner() {
     if(this.bannerNo == 5){
@@ -72,4 +81,24 @@ export class HomeComponent {
     clearInterval(this.intervalId);
   }
   showForm = false;
+
+  process=[
+    {
+      title:"Browse",
+      description:"Browse our curated unlisted share opportunities"
+    },
+    {
+      title:"Contact",
+      description:"Express interest via the form or WhatsApp"
+    },
+    {
+      title:"Confirmation",
+      description:"Our team confirms availability and execution timelines"
+    },
+    {
+      title:"Transaction",
+      description:"Transaction is conducted privately via our proprietary desk or partner network"
+    },
+  ]
 }
+

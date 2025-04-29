@@ -1,0 +1,73 @@
+.disclaimer {
+  padding: 1rem;
+  P {
+    padding: 1rem;
+    border-left: 5px solid rgb(255, 0, 0);
+    background-color: rgba(0, 0, 0, 0.09);
+    color: rgb(111, 109, 109);
+  }
+}
+
+.table {
+  padding: 2rem 2rem;
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-table th,
+.company-table td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+
+.company-table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tick {
+  color: green;
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .table {
+    display: none;
+  }
+}
+
+.section {
+  padding: 2rem 2rem;
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  h3 {
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.05);
+        text-decoration: underline;
+      }
+    }
+
+  }
+}

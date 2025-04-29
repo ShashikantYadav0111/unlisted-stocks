@@ -2,4 +2,58 @@
 <div class="about-container" *ngFor="let section of sections">
     <app-sub-section [sectionData]="section"></app-sub-section>
 </div>
+
+<div class="table">
+<h1>Some of Deals We've Facilitated</h1>
+
+    <table class="company-table">
+        <thead>
+            <tr>
+        <th>Company</th>
+        <th>Sector</th>
+        <th>Deal Type</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>NSE India Ltd</strong></td>
+        <td>Capital Markets</td>
+        <td>Buy-side</td>
+        <td><span class="status"><span class="tick">&#9989;</span> Executed</span></td>
+      </tr>
+      <tr>
+          <td><strong>OYO Rooms</strong></td>
+        <td>Hospitality</td>
+        <td>Sell-side</td>
+        <td><span class="status"><span class="tick">&#9989;</span> Booked</span></td>
+      </tr>
+      <tr>
+        <td><strong>MSEI (Metropolitan Exchange)</strong></td>
+        <td>Financial Infra</td>
+        <td>Buy-side</td>
+        <td><span class="status"><span class="tick">&#9989;</span> Closed</span></td>
+    </tr>
+      <tr>
+        <td><strong>Polymatech</strong></td>
+        <td>Semiconductor</td>
+        <td>Internal Inventory</td>
+        <td><span class="status"><span class="tick">&#9989;</span> Sold</span></td>
+      </tr>
+    </tbody>
+</table>
+</div>
+<div class="section">
+    <p>Explore curated private market opportunities backed by research and internal sourcing.
+        This screener is not a trading platform. Prices and availability are subject to change and based on off-market negotiations and in-house inventory.</p>
+
+<h3>📌 Want to participate? Click <a [routerLink]="['/contact']">“ Here ”</a> — we’ll handle the rest.</h3>
+</div>
+
 <app-testimonials></app-testimonials>
+<div class="disclaimer">
+    <p><strong>Disclaimer:</strong> UnlistedEquities does not operate as a trading platform or a registered stock exchange. We do not list public
+        buy/sell orders. All investment transactions are either conducted via our own book or in partnership with
+        SEBI-authorized intermediaries. Kindly conduct due diligence. This is not an investment advisory platform.</p>
+
+    </div>

@@ -6,7 +6,9 @@
     position: relative;
     padding: 10px 0;
     white-space: nowrap;
-    margin-bottom: 2rem;
+    position: sticky;
+    top: 5rem;
+    z-index: 1000;
 }
 
 .ticker {
