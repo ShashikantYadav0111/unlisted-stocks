@@ -1,0 +1,12 @@
+<div class="process-wrapper">
+    <h2 class="process-headline">How It Works</h2>
+    <p class="process-subheadline">A simple, transparent process to access exclusive unlisted share opportunities.</p>
+  
+    <div class="process-container">
+      <div class="process-card" *ngFor="let step of process">
+        <h3 class="process-title">{{ step.title }}</h3>
+        <p class="process-description">{{ step.description }}</p>
+      </div>
+    </div>
+  </div>
+  

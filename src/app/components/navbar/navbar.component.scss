@@ -1,14 +1,12 @@
 .nav-container {
-//   height: 3.5rem;
   display: flex;
   justify-content: space-between;
+  height: 3.5rem;
   align-items: center;
   padding: 0rem 1rem;
   box-sizing: border-box;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background: var(--secondary-color);
-
+  color: black;
+  background: white;
   position: sticky;
   top: 1.3rem;
   z-index: 1000;
@@ -16,10 +14,32 @@
 
 .logo {
   font-size: 2rem;
-  font-weight: bold;
-//   color: var(--secondary-color);
-  color: white;
+  font-weight: 500;
+  color: black;
   cursor: pointer;
+}
+
+.contact-button{
+  background: #1b263b;
+  color: white;
+  font-weight: bolder;
+  padding: 0.5rem 1.5rem;
+  animation:gradientAnimation 10s ease infinite ;
+  background-size: 400% 400%;
+  // border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 3px 3px rgba(0,0,0,0.19);
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .burger {
@@ -31,31 +51,13 @@
   cursor: pointer;
 }
 
-.burger .line {
-  height: 3px;
-  background-color: #000000;
-  border-radius: 2px;
-}
 
 .nav-links {
   display: flex;
   align-items: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-.login-button {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1.5rem;
-  line-height: 3rem;
-  width: 10rem;
-  border-radius: 10px;
-  background-color: var(--secondary-color);
-  text-align: center;
-  cursor: pointer;
-}
-.login-button:hover {
-  transform: scale(1.05);
-}
+
 
 .nav-links ul {
   list-style: none;
@@ -71,15 +73,13 @@
   transition: color 0.3s ease;
   font-weight: 900;
   padding: 0.5rem;
+  border-bottom: 3px solid rgb(249, 249, 249);
   transition: 0.2s ease-in-out;
-    border: 3px solid var(--secondary-color);
+  &:hover{
+    border-bottom: 3px solid black;
+  }
 }
 
-.nav-links li:hover {
-  // background-color: var(--secondary-color);
-  // border-radius: 10px;
-  // border-bottom:3px solid green ;
-}
 
 .enable {
   display: none;
@@ -90,8 +90,6 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-container {
-    // margin: 0.5rem ;
-    // width: 101%;
     border-radius: 0rem;
   }
   .burger {
@@ -100,15 +98,15 @@
 
   .nav-links {
     position: absolute;
-    top: 60px;
+    top: 80px;
     right: 0;
-    background-color: rgb(221, 218, 218);
+    background-color: rgb(255, 255, 255);
     flex-direction: column;
     width: 100%;
     transform: translateY(-110%);
     opacity: 0;
     visibility: hidden;
-    z-index: 10;
+    z-index: 2000;
     padding: 1rem;
   }
   .enable {
@@ -121,6 +119,7 @@
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+    z-index: 2000;
   }
 
   .nav-links ul {
@@ -149,4 +148,22 @@
 
 .burger.active .line:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+.enable{
+  display: none;
+}
+
+.disable{
+  display: block;
+}
+
+@media (max-width:768px){
+  .enable{
+    display: block;
+  }
+  .disable{
+    display: none;
+  }
 }

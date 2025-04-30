@@ -1,25 +1,17 @@
-<li class="news-card-web">
-    <img [src]="newItem.imageUrl" alt="news image" class="news-image" />
-    <div class="news-content">
-      <h3 class="news-title">{{ newItem.title }}</h3>
-      <!-- <h4 class="news-description">{{newItem.description}}</h4> -->
-      <div class="bottom">
-        <div class="buttons">
-          <a class="btn" [href]="newItem.newsUrl" target="_blank" rel="noopener noreferrer">🔗</a>
-          <h1 (click)="updateLike()"><span>🖤</span> {{newItem.likes}}</h1>
-          <h1><span>👁️</span> {{newItem.views}}</h1>
-          <h1 class="news-date">{{ newItem.date | date: 'mediumDate' }}</h1>
-        </div>
-      </div>
-    </div>
-</li>
 
-<li class="news-card-mobile">
-  <a [href]="newItem.newsUrl" target="_blank" rel="noopener noreferrer">
-    <img [src]="newItem.imageUrl" alt="news image" class="news-image-mobile" />
-    <div class="news-content-mobile">
-      <h3 class="news-title-mobile">{{ newItem.title }}</h3>
-      <p class="news-date-mobile">{{ newItem.date | date: 'mediumDate' }}</p>
+
+<div class="news-card">
+  <img [src]="newItem.imageUrl" alt="News Image" class="news-image" />
+  
+  <div class="news-content">
+    <h3 class="news-title">{{ newItem.title }}</h3>
+    <p class="news-description">{{ newItem.description }}</p>
+
+    <div class="news-meta">
+      <span class="news-likes">❤️ {{newItem.likes }}</span>
+      <span class="news-views">👁️ {{ newItem.views }}</span>
     </div>
-  </a>
-</li>
+
+    <a [href]="newItem.newsUrl" class="read-more" target="_blank" rel="noopener">Read More →</a>
+  </div>
+</div>

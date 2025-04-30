@@ -3,7 +3,7 @@ import { SectionComponent } from '../../components/section/section.component';
 import { CommonModule } from '@angular/common';
 import { SubSectionComponent } from "../../components/sub-section/sub-section.component";
 import { TestimonialsComponent } from "../../components/testimonials/testimonials.component";
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
+  image='./banner1.jpg'
   sections = [
     {
       title: '🛡️ Trust, Compliance & Transparency',
@@ -36,4 +37,10 @@ export class AboutComponent {
         ],image: '/about/section_3.png',
     },
   ];
+
+  constructor(private router: Router) {}
+
+  navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
 }

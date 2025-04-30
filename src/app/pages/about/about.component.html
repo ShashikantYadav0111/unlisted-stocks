@@ -1,14 +1,57 @@
-<app-section></app-section>
-<div class="about-container" *ngFor="let section of sections">
-    <app-sub-section [sectionData]="section"></app-sub-section>
+<div class="banner">
+  <h1>About Us</h1>
 </div>
+<div class="intro-section">
+  <div class="intro-content">
+    <h2>Empowering Investors in the Unlisted Space</h2>
+    <p>
+      Welcome to <strong>Unlisted Equities</strong>, your trusted platform for trading unlisted shares and pre-IPO
+      stocks of India’s most promising private companies.
+      We’re on a mission to democratize access to opportunities that were once reserved for a select few.
+    </p>
+  </div>
+  <div class="intro-image">
+    <img src="./hero.jpeg" alt="Unlisted Equities Platform" />
+  </div>
+</div>
+<section class="trust-section">
+  <div class="trust-content">
+    <h2>🛡️ Trust, Compliance & Transparency</h2>
+    <ul>
+      <li>We don’t run a public trading platform.</li>
+      <li>No peer-to-peer dealing.</li>
+      <li>Every transaction is routed via our proprietary desk or SEBI-registered intermediaries.</li>
+      <li>Investor data and interest is handled securely and confidentially.</li>
+    </ul>
+  </div>
+  <div class="trust-image">
+    <img src="./transparency.webp" alt="Trust & Compliance">
+  </div>
+</section>
+
+<section class="partners-section">
+  <div class="partners-content">
+    <h2>👥 Who We Work With</h2>
+    <ul>
+      <li>HNIs & Family Offices</li>
+      <li>Investment Bankers</li>
+      <li>Startup Founders (Exit Liquidity)</li>
+      <li>Private Equity Desks</li>
+      <li>Fund Managers & Syndicates</li>
+    </ul>
+  </div>
+  <div class="partners-image">
+    <img src="./partners.jpeg" alt="Professional network illustration" />
+  </div>
+</section>
+<!-- <app-section></app-section> -->
 
 <div class="table">
-<h1>Some of Deals We've Facilitated</h1>
+  <h1>Some of Deals We've Facilitated</h1>
 
-    <table class="company-table">
-        <thead>
-            <tr>
+  <table class="company-table">
+    <thead>
+      <tr>
         <th>Company</th>
         <th>Sector</th>
         <th>Deal Type</th>
@@ -23,7 +66,7 @@
         <td><span class="status"><span class="tick">&#9989;</span> Executed</span></td>
       </tr>
       <tr>
-          <td><strong>OYO Rooms</strong></td>
+        <td><strong>OYO Rooms</strong></td>
         <td>Hospitality</td>
         <td>Sell-side</td>
         <td><span class="status"><span class="tick">&#9989;</span> Booked</span></td>
@@ -33,7 +76,7 @@
         <td>Financial Infra</td>
         <td>Buy-side</td>
         <td><span class="status"><span class="tick">&#9989;</span> Closed</span></td>
-    </tr>
+      </tr>
       <tr>
         <td><strong>Polymatech</strong></td>
         <td>Semiconductor</td>
@@ -41,19 +84,30 @@
         <td><span class="status"><span class="tick">&#9989;</span> Sold</span></td>
       </tr>
     </tbody>
-</table>
+  </table>
 </div>
-<div class="section">
-    <p>Explore curated private market opportunities backed by research and internal sourcing.
-        This screener is not a trading platform. Prices and availability are subject to change and based on off-market negotiations and in-house inventory.</p>
 
-<h3>📌 Want to participate? Click <a [routerLink]="['/contact']">“ Here ”</a> — we’ll handle the rest.</h3>
-</div>
+
+<section class="opportunity-section">
+  <div class="opportunity-content">
+    <p class="opportunity-highlight">
+      Explore curated private market opportunities backed by research and internal sourcing.
+    </p>
+    <p>
+      This screener is <strong>not a trading platform</strong>. Prices and availability are subject to change and are based on off-market negotiations and in-house inventory.
+    </p>
+    <div class="cta">
+      <span>📌 Want to participate?</span>
+      <button (click)="navigateTo('/contact')" class="cta-button">Click Here</button>
+    </div>
+  </div>
+</section>
 
 <app-testimonials></app-testimonials>
 <div class="disclaimer">
-    <p><strong>Disclaimer:</strong> UnlistedEquities does not operate as a trading platform or a registered stock exchange. We do not list public
-        buy/sell orders. All investment transactions are either conducted via our own book or in partnership with
-        SEBI-authorized intermediaries. Kindly conduct due diligence. This is not an investment advisory platform.</p>
+  <p><strong>Disclaimer:</strong> UnlistedEquities does not operate as a trading platform or a registered stock
+    exchange. We do not list public
+    buy/sell orders. All investment transactions are either conducted via our own book or in partnership with
+    SEBI-authorized intermediaries. Kindly conduct due diligence. This is not an investment advisory platform.</p>
 
-    </div>
+</div>

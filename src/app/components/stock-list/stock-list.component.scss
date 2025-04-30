@@ -13,7 +13,6 @@ input {
   }
 }
 
-
 .footer-section p {
   margin: 0.5rem 0;
   display: flex;
@@ -23,7 +22,7 @@ input {
   color: #525050;
 }
 
-.footer-section{
+.footer-section {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -35,23 +34,21 @@ input {
   justify-content: space-around;
   padding: 2rem;
   width: 80%;
+  height: 100vh;
   margin: 0rem auto;
   height: 35rem;
-  // border: 1px solid black;
-  box-shadow: 1px 1px 10px rgba(0,0,0,0.19);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.19);
   border-radius: 10px;
-
 }
 
 /* Base styles for the stock table */
-.table {
+.table-wrapper {
   overflow: scroll;
   overflow-x: hidden;
-
-  min-height: 30rem;
-  // width: 70%;
+  max-height: 32rem;
 }
 .stock-table {
+  box-sizing: border-box;
   border-collapse: collapse;
   margin: 20px 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -60,14 +57,15 @@ input {
 }
 
 .stock-table thead {
-  background-color: var(--secondary-color);
+  background-color: #1b263b;
   color: white;
   // border: 2px solid black;
 }
+
 .quote-button {
   align-self: center;
   color: white;
-  background-color: var(--secondary-color);
+  background-color: #1b263b;
   padding: 0.5rem;
   margin: 0.2rem;
   border-radius: 10px;
@@ -149,7 +147,7 @@ input {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
     justify-content: space-between;
     gap: 6px;
     font-size: 0.75rem;
@@ -165,20 +163,20 @@ input {
       height: 1.25rem;
     }
   }
-  
+
   label:hover {
     background-color: #d1d5db;
   }
 }
 
-.filter-group{
+.filter-group {
   overflow: scroll;
   width: 20rem;
   max-height: 28rem;
   overflow-x: hidden;
   padding: 1rem;
   border-left: 5px solid black;
-  border-radius:10px ;
+  border-radius: 10px;
 }
 .stock-list {
   list-style: none;
@@ -206,13 +204,11 @@ input {
   }
 }
 
-
-
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .screener-container {
     height: 100%;
-    width:95%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -225,7 +221,7 @@ input {
     width: 50%;
   }
 
-  .filter-group{
+  .filter-group {
     display: flex;
     flex-direction: row;
     min-width: 22rem;
@@ -277,13 +273,13 @@ input {
   }
 }
 
-.btn{
+.btn {
   padding: 0.3rem 0.6rem;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 0.75rem;
-    border-radius: 10px;
-    background-color: var(--secondary-color);
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.75rem;
+  border-radius: 10px;
+  background-color: #1b263b;
 }
 
 .overlay {
@@ -431,12 +427,12 @@ input {
   }
 }
 
-.disclaimer{
-  padding: 1REM;
-  P{
-      padding: 1REM;
-      border-left:5px solid rgb(255, 0, 0);
-      background-color: rgba(0,0,0,0.09);
-      color: rgb(111, 109, 109);
+.disclaimer {
+  padding: 1rem;
+  P {
+    padding: 1rem;
+    border-left: 5px solid rgb(255, 0, 0);
+    background-color: rgba(0, 0, 0, 0.09);
+    color: rgb(111, 109, 109);
   }
 }

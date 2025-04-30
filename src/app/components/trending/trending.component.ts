@@ -19,11 +19,6 @@ export class TrendingComponent {
 
   companies = [
     {
-      name: 'Metropolitan Stock Exchange',
-      sector: 'Stock Exchange',
-      image: './trending/metro.webp',
-    },
-    {
       name: 'Lava International',
       sector: 'Consumer Durables',
       image: './trending/lava.webp',
@@ -43,21 +38,6 @@ export class TrendingComponent {
       name: 'Oravel Stays (OYO Rooms)',
       sector: 'Hospitality',
       image: './trending/oyo.webp',
-    },
-    {
-      name: 'Taparia Tools',
-      sector: 'Manufacturing',
-      image: './trending/taparia.webp',
-    },
-    {
-      name: 'National Stock Exchange (NSE)',
-      sector: 'Stock Exchange',
-      image: './trending/nse.webp',
-    },
-    {
-      name: 'Nayara Energy',
-      sector: 'Energy',
-      image: './trending/nayara.webp',
     },
     {
       name: 'HDB Financial Services',
