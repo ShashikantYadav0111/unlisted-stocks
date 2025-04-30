@@ -1,120 +1,126 @@
-<h1>testing branch</h1>
-<app-disclaimer></app-disclaimer>
-<div class="" (click)="showForm = true">
-    <app-ticker  ></app-ticker>
+<!-- <h1>testing branch</h1> -->
+
+<div class="ticker-container" (click)="showForm = true">
+  <app-ticker></app-ticker>
 </div>
 <div class="home-container-mobile">
-    <header class="head-line">
-        <h1 class="heading">
-            Buy or Sell Unlisted Shares, Pre IPO Shares, ESOPs.
-        </h1>
-        
-    </header>
-    
-    <div class="image-holder">
-        <img src="./backgrounds/background1.png" alt="Invest in private companies" />
-    </div>
-    
-    <div class="about-btn">
-        <a class="btn" routerLink="/about" aria-label="Learn more about us">Learn More</a>
-    </div>
+  <header class="head-line">
+    <h1 class="heading">
+      Strategic Access to India's Most Valuable Unlisted Companies.
+    </h1>
+
+  </header>
+
+  <div class="image-holder">
+    <img src="./backgrounds/background1.png" alt="Invest in private companies" />
+  </div>
+
+  <div class="about-btn">
+    <a class="btn" routerLink="/about" aria-label="Learn more about us">Learn More</a>
+  </div>
 </div>
 <div class="home-container-web">
-    <div class="heading-text">
+  <div class="heading-text">
 
-        <header class="head-line">
-            <h1 class="heading">
-                Buy or Sell Unlisted Shares, Pre IPO Shares, ESOPs.
-            </h1>
-            <h2>Easily explore unlisted stocks, view detailed information, and seamlessly buy or sell them on a secure trading platform.</h2>
-        </header>
+    <header class="head-line" style="display: flex;flex-direction: column;justify-content: space-between;gap: 2rem; padding: 3rem;">
+      <h1 class="heading">
+        Strategic Access to India's Most Valuable Unlisted Companies
+      </h1>
+      <h2 style="font-size: 1rem;width: 30rem;">We help investors discover and participate in high-potential Pre-IPO and
+        unlisted equity opportunities — backed
+        by research, sourced through private networks, and transacted via our proprietary book.</h2>
+      <cite style="font-size: 1rem;width: 20rem;">📌 Not a trading platform. All investments are routed through
+        authorized
+        intermediaries or in-house execution.</cite>
         <div class="about-btn">
-            <a class="btn" routerLink="/about" aria-label="Learn more about us">Learn More</a>
+          <a class="btn" routerLink="/about" aria-label="Learn more about us">Lets Connect </a>
         </div>
-    </div>
-    <div class="image-holder" [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}">
-        <img src={{imageUrl}} alt="Invest in private companies" />
-    </div>
-    
+    </header>
+  </div>
+  <div class="image-holder" >
+    <img src={{imageUrl2}} alt="Invest in private companies" />
+  </div>
+
 </div>
+<app-why></app-why>
+
+
 <section class="trending">
-    <h1><span>Trending Stocks</span></h1>
-    <app-trending></app-trending>
+  <h1><span>Trending Stocks</span></h1>
+  <app-trending></app-trending>
 </section>
 <div class="about-btn">
-    <a class="btn" routerLink="/screener" aria-label="Learn more about us">Screener</a>
+  <a class="btn" routerLink="/screener" aria-label="Learn more about us">Screener</a>
 </div>
-    <!-- <section class="stock-section">
-        <h1>Popular Unlisted Stocks</h1>
-        <div class="sub-heading-1">
-            <app-ticker></app-ticker>
-        </div>
-    </section> -->
-    
-    <section class="process-container">
-        <h1 >Process to Buy Unlisted Stocks</h1>
-        <div class="process">
-            <article class="step">
-                <h3><p>1</p></h3>
-                <h2>Contact <br> Us</h2>
-                <p>Contact us through the provided contact details.</p>
-            </article>
-            <article class="step">
-                <h3><p>2</p></h3>
-                <h2>Deal Processing</h2>
-                <p>Our RM will Reach out to you and guide you through the whole process.</p>   
-            </article>
-            <article class="step">
-                <h3><p>3</p></h3>
-                <h2>Deal Completion</h2>
-                <p>After The Payment has been made you will recieve your Shares withing <strong>48 hours</strong> Securly</p>
-            </article>
-        </div>
-    </section>
-    <app-testimonials> </app-testimonials>
-    <app-news></app-news>
-    <!-- <app-news></app-news> -->
+
+
+<section class="process-container">
+  <h1>📘 How It Works</h1>
+  <div class="process">
+    <article class="step" *ngFor="let step of process;let i = index">
+      <h3>
+        <p>{{i+1}}</p>
+      </h3>
+      <h2>{{step.title}}</h2>
+      <p>{{step.description}}</p>
+    </article>
+  </div>
+</section>
+<app-testimonials> </app-testimonials>
+<app-news></app-news>
+<!-- <app-news></app-news> -->
 
 
 <!-- Form Modal -->
 <div *ngIf="showForm" class="overlay">
-    <div class="form-popup">
-      <h2>Please Fill The Form</h2>
-      <form action="https://formsubmit.co/crowmaestro.0111@gmail.com" method="POST">
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Enter Stock Quantity:</label>
-            <input type="number" name="quantity"/>
-          </div>
-          <div class="form-group">
-            <label>Buy or Sell:</label>
-            <select name="tradeAction">
-              <option value="">--Please Select--</option>
-              <option value="buy">Buy</option>
-              <option value="sell">Sell</option>
-            </select>
-          </div>
-  
-          <div class="form-group">
-            <label>Full Name:</label>
-            <input type="text" name="fullname"/>
-          </div>
-          <div class="form-group">
-            <label>Contact Number:</label>
-            <input type="tel" name="phoneNo"/>
-          </div>
-  
-          <div class="form-group full-width">
-            <label>Email:</label>
-            <input type="email" name="email"/>
-          </div>
-        </div>
-  
-        <div class="form-buttons">
-          <button type="submit" class="submit-btn">Submit</button>
-          <button type="button" (click)="showForm = false" class="close-btn">Close</button>
-        </div>
-      </form>
+  <div class="form-popup">
+    <h2>Please Fill The Form</h2>
+    <h3 style="color: var(--secondary-color);">Reach out to us Directly</h3>
+    <div class="footer-section" ngStyle]="{
+      background: 'linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #facc15)',
+      backgroundSize: '400% 400%',
+      animation: 'gradientMove 15s ease infinite'
+    }">
+      <p><i class="fas fa-envelope"></i> {{contactInfo2.email}}</p>
+      <p><i class="fas fa-phone"></i> {{contactInfo2.phoneNo}}</p>
     </div>
+
+    <form action="https://formsubmit.co/unlistedequities@gmail.com" method="POST">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Enter Stock Quantity:</label>
+          <input type="number" name="quantity" />
+        </div>
+        <div class="form-group">
+          <label>Buy or Sell:</label>
+          <select name="tradeAction">
+            <option value="">--Please Select--</option>
+            <option value="buy">Buy</option>
+            <option value="sell">Sell</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Full Name:</label>
+          <input type="text" name="fullname" />
+        </div>
+        <div class="form-group">
+          <label>Contact Number:</label>
+          <input type="tel" name="phoneNo" />
+        </div>
+
+        <div class="form-group full-width">
+          <label>Email:</label>
+          <input type="email" name="email" />
+        </div>
+      </div>
+
+      <div class="form-buttons">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="button" (click)="showForm = false" class="close-btn">Close</button>
+      </div>
+    </form>
   </div>
-  
+</div>
+
+<app-floating-whatsapp></app-floating-whatsapp>

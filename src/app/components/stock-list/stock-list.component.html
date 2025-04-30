@@ -1,8 +1,8 @@
 <input type="text" placeholder="Search stocks..." [(ngModel)]="searchQuery" (input)="applyFilters()"
   class="search-box" />
-  <div class="hot-deals-banner">
-    GET HOT DEALS At best price
-  </div>
+<div class="hot-deals-banner" (click)="showForm = true">
+  GET HOT DEALS At best price - Click Here!!
+</div>
 <div class="screener-container">
   <div class="filters">
     <h2>Sector</h2>
@@ -52,11 +52,21 @@
 <div *ngIf="showForm" class="overlay">
   <div class="form-popup">
     <h2>Please Fill The Form</h2>
-    <form action="https://formsubmit.co/crowmaestro.0111@gmail.com" method="POST">
-      <div class="form-grid"> 
+    <h3 style="color: var(--secondary-color);">We Are Just One Call Away</h3>
+    <div class="footer-section" [ngStyle]="{
+      background: 'linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #facc15)',
+      backgroundSize: '400% 400%',
+      animation: 'gradientMove 15s ease infinite'
+    }">
+      <p [ngStyle]="{fontSize:'1.25rem'}"><i class="fas fa-envelope"></i> {{contactInfo2.email}}</p>
+      <p [ngStyle]="{fontSize:'1.25rem'}"><i class="fas fa-phone"></i> {{contactInfo2.phoneNo}}</p>
+    </div>
+
+    <form action="https://formsubmit.co/unlistedequities@gmail.com" method="POST">
+      <div class="form-grid">
         <div class="form-group">
           <label>Enter Stock Quantity:</label>
-          <input type="number" name="quantity" required/>
+          <input type="number" name="quantity" required />
         </div>
         <div class="form-group">
           <label>Buy or Sell:</label>
@@ -67,18 +77,18 @@
           </select>
         </div>
 
-        <div class="form-group" >
+        <div class="form-group">
           <label>Full Name:</label>
-          <input type="text" name="fullname" required/>
+          <input type="text" name="fullname" required />
         </div>
         <div class="form-group">
           <label>Contact Number:</label>
-          <input type="tel" name="phoneNo" required/>
+          <input type="tel" name="phoneNo" required />
         </div>
 
         <div class="form-group full-width">
           <label>Email:</label>
-          <input type="email" name="email" placeholder="Optional"/>
+          <input type="email" name="email" placeholder="Optional" />
         </div>
       </div>
 
@@ -89,3 +99,9 @@
     </form>
   </div>
 </div>
+<div class="disclaimer">
+  <p><strong>Disclaimer:</strong> This screener is for informational and exploratory purposes only. UnlistedEquities
+    does not facilitate direct trading. All transactions, if initiated, are privately executed via our proprietary desk
+    or authorized intermediaries. Prices are indicative and subject to negotiation.</p>
+</div>
+<app-floating-whatsapp></app-floating-whatsapp>

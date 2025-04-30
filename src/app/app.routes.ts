@@ -42,6 +42,11 @@ export const routes: Routes = [
       import('./pages/tnc/tnc.component').then((m) => m.TncComponent),
   },
   {
+    path: 'backend',
+    loadComponent: () =>
+      import('./pages/backend/backend.component').then((m) => m.BackendComponent),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

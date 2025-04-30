@@ -5,50 +5,45 @@ import { Component } from '@angular/core';
   selector: 'app-testimonials',
   imports: [CommonModule],
   templateUrl: './testimonials.component.html',
-  styleUrl: './testimonials.component.scss'
+  styleUrl: './testimonials.component.scss',
 })
 export class TestimonialsComponent {
   testimonials = [
     {
-      name: "Rahul Mehta",
-      title: "Investor, Mumbai",
-      message: "This app makes trading so simple and intuitive. I’ve seen real improvement in my strategies."
+      name: 'Vikram Joshi',
+      title: 'Bank Manager, Indore',
+      message: 'The clarity in their pre‑IPO fee structure gives me complete peace of mind. No last‑minute surprises, just a smooth process and fair pricing every step of the way.',
+      rating: '★★★★★',
     },
     {
-      name: "Priya Sharma",
-      title: "Trader, Bangalore",
-      message: "I love the real-time data and clean UI. Perfect for both beginners and experienced traders."
+      name: 'Ananya Reddy',
+      title: 'Day Trader, Vizag',
+      message: 'Unlike other brokers who jack up prices, this team sticks to honest rates. Plus, their execution is lightning‑fast—I’ve never missed a deal due to delays.',
+      rating: '★★★★☆',
     },
     {
-      name: "Arjun Verma",
-      title: "Equity Analyst, Delhi",
-      message: "Best stock market app I've used. The insights and alerts are incredibly helpful!"
+      name: 'Harish Kumar',
+      title: 'SME Investor, Nagpur',
+      message: 'Finally, a broker that treats small investors fairly. Their flat‑fee model saved me nearly 30% compared to my old broker’s hidden markups.',
+      rating: '★★★★★',
     },
     {
-      name: "Sneha Iyer",
-      title: "Beginner Trader, Chennai",
-      message: "I was new to investing, but this app gave me the confidence to start. The tutorials are super helpful!"
+      name: 'Sunita Malhotra',
+      title: 'Family Office, Jaipur',
+      message: 'For high‑value unlisted deals, their competitive rates and in‑depth due diligence support have been invaluable. I trust them completely with our family’s investments.',
+      rating: '★★★★★',
     },
     {
-      name: "Rohit Deshmukh",
-      title: "Swing Trader, Pune",
-      message: "Love the technical analysis tools and how customizable the watchlist is. Well done team!"
+      name: 'Amit Bansal',
+      title: 'VC Associates, Lucknow',
+      message: 'Best partner I’ve found for pre‑IPO allocations. Their transparent pricing and negotiation support on a unicorn deal recently made a huge difference.',
+      rating: '★★★★★',
     },
     {
-      name: "Anjali Kapoor",
-      title: "Finance Blogger, Hyderabad",
-      message: "I've reviewed many platforms, and this one is by far the most intuitive and well-designed for Indian markets."
+      name: 'Priyanka Choudhary',
+      title: 'Corporate Investor, Chandigarh',
+      message: 'I switched here after realizing how much I was overpaying. Now, the fees are fair, and the team actually takes the time to explain their pricing—no more guesswork.',
+      rating: '★★★★☆',
     },
-    {
-      name: "Nikhil Arora",
-      title: "Options Trader, Noida",
-      message: "The real-time alerts have saved me from losses multiple times. This is a must-have app for active traders."
-    },
-    {
-      name: "Kavita Sinha",
-      title: "Portfolio Manager, Kolkata",
-      message: "Managing multiple stocks is effortless now. Great insights, smart UI, and fast performance."
-    }
-  ];
-  
+  ]; 
 }

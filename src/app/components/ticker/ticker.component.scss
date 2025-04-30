@@ -6,13 +6,15 @@
     position: relative;
     padding: 10px 0;
     white-space: nowrap;
-    margin-bottom: 2rem;
+    position: sticky;
+    top: 1rem;
+    z-index: 1000;
 }
 
 .ticker {
     display: flex;
     width: max-content;
-    animation: scroll-left 600s linear infinite;
+    animation: scroll-left 1000s linear infinite;
     flex-direction: row;
 }
 

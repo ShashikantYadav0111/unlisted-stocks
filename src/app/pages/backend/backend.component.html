@@ -1,0 +1,38 @@
+<div class="backend-container">
+    <div class="news">
+        <h1>Add News</h1>
+        <form [formGroup]="articleForm" (ngSubmit)="onSubmitNews()" class="form-container">
+            <label>Title:</label>
+            <input type="text" formControlName="title" placeholder="Enter title" />
+          
+            <label>Description:</label>
+            <textarea formControlName="description" placeholder="Enter description"></textarea>
+          
+            <label>Image URL:</label>
+            <input type="text" formControlName="imageUrl" placeholder="Enter image URL" />
+          
+            <label>Article URL:</label>
+            <input type="text" formControlName="articleUrl" placeholder="Enter article URL" />
+          
+            <button type="submit" [disabled]="!articleForm.valid">Submit</button>
+          </form>
+    </div>
+    <div class="blogs">
+        <h1>Add Blog</h1>
+        <form [formGroup]="blogForm" (ngSubmit)="onSubmitBlog()" class="form-container">
+            <label>Title:</label>
+            <input type="text" formControlName="title" placeholder="Enter blog title" />
+          
+            <label>Banner Image URL:</label>
+            <input type="text" formControlName="banner" placeholder="Enter banner image URL" />
+          
+            <label>Short Description:</label>
+            <textarea formControlName="description" placeholder="Enter short description"></textarea>
+          
+            <label>Full Article:</label>
+            <textarea formControlName="fullArticle" rows="10" placeholder="Write your article here..."></textarea>
+          
+            <button type="submit" [disabled]="!blogForm.valid">Submit</button>
+          </form>
+    </div>
+</div>

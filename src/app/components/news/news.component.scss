@@ -3,27 +3,28 @@ h2 {
   margin: 2rem auto;
 }
 .news-container {
-  padding: 0px auto;
+  box-sizing: border-box;
+  padding: 5px auto;
+  height: 35rem;
   width: 95%;
-  min-height: 60vh;
   overflow: scroll;
   overflow-y: none;
-  margin: 0;
-  background: #efefef;
+  margin: 1rem;
+  margin-bottom: 4.5rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 
   .news-list {
     display: flex;
     flex-direction: row;
-    gap: 5rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem;
   }
   
 }
 
-.news-container {
-  
-}
+
 
 .news-container ul {
   list-style: none;

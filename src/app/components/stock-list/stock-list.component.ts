@@ -4,15 +4,21 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { QuoteFormComponent } from "../quote-form/quote-form.component";
+import { FloatingWhatsappComponent } from "../floating-whatsapp/floating-whatsapp.component";
 
 @Component({
   selector: 'app-stock-list',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, FloatingWhatsappComponent],
   templateUrl: './stock-list.component.html',
   styleUrl: './stock-list.component.scss',
 })
 export class StockListComponent {
   showForm = false;
+  contactInfo2 = { 
+    phoneNo:'+91 9814003436',
+    email:'unlistedequities@gmail.com',
+    address:''
+  }
 
   stocks: any[] = [];
   filteredStocks: any[] = [];
@@ -26,20 +32,13 @@ export class StockListComponent {
   searchQuery = '';
 
   constructor(private http: HttpClient) {
-    this.http.get('assets/screener.csv', { responseType: 'text' }).subscribe(csvData => {
-      Papa.parse(csvData, {
-        header: true,
-        skipEmptyLines: true,
-        complete: (result) => {
-          this.stocks = result.data;
+    this.http.get<any[]>('https://stockapp-backend-1at5.onrender.com/stock/get-all').subscribe(response => {
+      
+          this.stocks = response;
 
-
-          // Auto-populate sector and cap filters
           this.allSectors = [...new Set(this.stocks.map(stock => stock.sector.toUpperCase()))];
 
           this.applyFilters();
-        }
-      });
     });
   }
 

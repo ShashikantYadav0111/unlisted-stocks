@@ -9,11 +9,12 @@
     </div>
     <div class="nav-links" [class.active]="isMenuOpen" (click)="closeMenu()">
         <ul>
-            <li [ngStyle]="isClicked ===''?{border:'1px solid black'}:{}" (click)="navigateTo('')">Home</li>
+            <li [ngStyle]="isClicked===''?{border:'3px solid black',color:'white',backgroundColor:'black'}:{}" (click)="navigateTo('')">Home</li>
             <!-- <li (click)="navigateTo('about')"> About</li> -->
-            <li [ngStyle]="isClicked ===''?{border:'1px solid black'}:{}" (click)="navigateTo('screener')">Screener</li>
-            <li (click)="navigateTo('contact')">Contact</li>
-            <li (click)="navigateTo('news')">News</li>
+            <li [ngStyle]="isClicked==='screener'?{border:'3px solid black',color:'white',backgroundColor:'black'}:{}"  (click)="navigateTo('screener')">Screener</li>
+            <li [ngStyle]="isClicked==='contact'?{border:'3px solid black',color:'white',backgroundColor:'black'}:{}"  (click)="navigateTo('contact')">Contact</li>
+            <li [ngStyle]="isClicked==='news'?{border:'3px solid black',color:'white',backgroundColor:'black'}:{}"  (click)="navigateTo('news')">News</li>
+            <li [ngStyle]="isClicked==='backend'?{border:'3px solid black',color:'white',backgroundColor:'black'}:{}"  (click)="navigateTo('backend')">Backend</li>
         </ul>
     </div>
 </div>

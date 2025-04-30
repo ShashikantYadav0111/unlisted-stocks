@@ -1,0 +1,16 @@
+<div class="why-container">
+    <h1>Lets Talk About Unlisted Stocks</h1>
+    <div class="content">
+        <div class="card" *ngFor="let question of questions">
+            <div class="inner-card">
+
+                <div class="front">
+                    {{question.question}}
+                </div>
+                <div class="back">
+                    {{question.answer}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

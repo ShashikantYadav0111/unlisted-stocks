@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class NewsCardComponent {
   @Input() newItem:any={};
+  updateLike(){}
 }

@@ -1,12 +1,9 @@
-<div class="trending-container-web" >
+<!-- <div class="trending-container-web" >
     <div class="trending-card" *ngIf="currentStock">
         <div class="details">
-            <!-- <div class="logo"> -->
                 <img src="{{currentStock.logo}}" alt="">
-            <!-- </div> -->
             <div class="dets">
                 <h3>{{currentStock.company_name}} </h3>
-                <!-- <h3>Price: ₹ {{currentStock.price_per_share}} </h3> -->
                 <h4>Sector: {{currentStock.sector}} </h4>
             </div>
         </div>
@@ -27,14 +24,20 @@
 <div class="trending-container-mobile" >
     <div class="trending-card" *ngIf="currentStock">
         <div class="details">
-            <!-- <div class="logo"> -->
                 <img src="{{currentStock.logo}}" alt="">
-            <!-- </div> -->
             <div class="dets">
                 <h3>{{currentStock.company_name}} </h3>
-                <!-- <h3>Price: ₹ {{currentStock.price_per_share}} </h3> -->
                 <h3>Sector:{{currentStock.sector}} </h3>
             </div>
         </div>
         
+</div> -->
+<div class="card-container">
+    <div data-aos="zoom-in" class="card" *ngFor="let company of companies ">
+        <img src="{{company.image}}" alt="">
+        <div class="text">
+            <h3>{{company.name}}</h3>
+            <h5>Sector:{{company.sector}}</h5>
+        </div>
+    </div>
 </div>
