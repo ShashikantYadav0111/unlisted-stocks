@@ -11,6 +11,7 @@ import { StatisticsComponent } from '../../components/statistics/statistics.comp
 import { ProcessComponent } from '../../components/process/process.component';
 import { DiscComponent } from '../disc/disc.component';
 import { DisclaimerComponent } from '../../components/disclaimer/disclaimer.component';
+import { Footer3Component } from '../../components/footer3/footer3.component';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,7 @@ import { DisclaimerComponent } from '../../components/disclaimer/disclaimer.comp
     FloatingWhatsappComponent,
     WhyComponent,
     ProcessComponent,
-    DisclaimerComponent
+    Footer3Component
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

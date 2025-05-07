@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { SubSectionComponent } from "../../components/sub-section/sub-section.component";
 import { TestimonialsComponent } from "../../components/testimonials/testimonials.component";
 import { Router, RouterModule } from '@angular/router';
+import { Footer3Component } from "../../components/footer3/footer3.component";
 
 @Component({
   selector: 'app-about',
-  imports: [SectionComponent, CommonModule, SubSectionComponent, TestimonialsComponent,RouterModule],
+  imports: [CommonModule,  TestimonialsComponent, RouterModule, Footer3Component],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })

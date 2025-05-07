@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
-import * as Papa from 'papaparse';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { QuoteFormComponent } from '../quote-form/quote-form.component';
 import { FloatingWhatsappComponent } from '../floating-whatsapp/floating-whatsapp.component';
-import { NewsService } from '../../services/news.service';
-import { Observable } from 'rxjs';
 import { StockService } from '../../services/stock.service';
+import { Footer3Component } from '../footer3/footer3.component';
 
 @Component({
   selector: 'app-stock-list',
-  imports: [CommonModule, FormsModule, FloatingWhatsappComponent],
+  imports: [CommonModule, FormsModule, FloatingWhatsappComponent,Footer3Component],
   templateUrl: './stock-list.component.html',
   styleUrl: './stock-list.component.scss',
 })

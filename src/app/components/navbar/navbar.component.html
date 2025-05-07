@@ -1,19 +1,17 @@
-<div class="nav-container">
-    <div class="logo"
-    (click)="navigateTo('')"
-    >
-    Unlisted Equities
+<div class="nav-container h-5">
+    <div class="logo" (click)="navigateTo('')">
+        Unlisted Equities
     </div>
     <div class="burger" (click)="toggleMenu()">
         ☰
     </div>
     <div class="nav-links" [class.active]="isMenuOpen" (click)="closeMenu()">
         <ul>
-            <li  (click)="navigateTo('')">Home</li>
-            <li (click)="navigateTo('about')"> About</li>
-            <li  (click)="navigateTo('screener')">Screener</li>
-            <li   (click)="navigateTo('news')">News</li>
-            <li  class="enable" (click)="navigateTo('contact')">Contact</li>
+            <li class="hover:bg-[#1b263b] hover:text-white rounded-md" (click)="navigateTo('')">Home</li>
+            <li class="hover:bg-[#1b263b] hover:text-white rounded-md" (click)="navigateTo('about')"> About</li>
+            <li class="hover:bg-[#1b263b] hover:text-white rounded-md" (click)="navigateTo('screener')">Screener</li>
+            <li class="hover:bg-[#1b263b] hover:text-white rounded-md" (click)="navigateTo('news')">News</li>
+            <li class="hover:bg-[#1b263b] hover:text-white rounded-md" class="enable" (click)="navigateTo('contact')">Contact</li>
             <!-- <li   (click)="navigateTo('backend')">Backend</li> -->
         </ul>
     </div>

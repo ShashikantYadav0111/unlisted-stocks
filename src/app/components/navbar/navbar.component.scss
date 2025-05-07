@@ -1,7 +1,7 @@
 .nav-container {
   display: flex;
   justify-content: space-between;
-  height: 3.5rem;
+  height: 4rem;
   align-items: center;
   padding: 0rem 1rem;
   box-sizing: border-box;
@@ -10,6 +10,7 @@
   position: sticky;
   top: 0rem;
   z-index: 5000;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.19);
 }
 
 .logo {
@@ -72,7 +73,7 @@
   cursor: pointer;
   transition: color 0.3s ease;
   font-weight: 900;
-  padding: 0.5rem;
+  padding: 0.2rem 0.5rem;
   border-bottom: 3px solid rgb(249, 249, 249);
   transition: 0.2s ease-in-out;
   &:hover{

@@ -1,5 +1,4 @@
-<input type="text" placeholder="Search stocks..." [(ngModel)]="searchQuery" (input)="applyFilters()"
-  class="search-box" />
+
 <div class="hot-deals-banner" (click)="showForm = true">
   GET HOT DEALS At best price - Click Here!!
 </div>
@@ -16,17 +15,18 @@
   </div>
 
   <div class="table-wrapper" style="margin: 0px auto;">
+    <input type="text" placeholder="Search stocks..." [(ngModel)]="searchQuery" (input)="applyFilters()"
+  class="search-box" />
     <table class="stock-table">
       <thead>
         <tr>
           <th>Stock Name</th>
           <th>Current Price</th>
-          <th>M.Cap</th>
+          <th>M.Cap(Cr)</th>
           <th>P/E</th>
-          <th>roce</th>
-          <th>roe</th>
-          <th>3yr REV cagr</th>
-          <th>Quote</th>
+          <th>ROCE</th>
+          <th>ROE</th>
+          <th>QUOTE</th>
 
         </tr>
       </thead>
@@ -38,7 +38,6 @@
           <td>{{ stock.pe }}</td>
           <td>{{ stock.roce || 'NA' }}</td>
           <td>{{ stock.roe }}</td>
-          <td>{{ stock.three_yr_rev_charge }}</td>
           <td><button (click)="showForm = true" class="btn">Get Quote</button></td>
         </tr>
       </tbody>
@@ -65,12 +64,6 @@
     <form action="https://formsubmit.co/unlistedequities@gmail.com" method="POST">
       <div class="form-grid">
         <div class="form-group">
-          <label>Enter Stock Quantity:</label>
-          <input type="number" name="quantity" required />
-        </div>
- 
-
-        <div class="form-group">
           <label>Full Name:</label>
           <input type="text" name="fullname" required />
         </div>
@@ -81,7 +74,7 @@
 
         <div class="form-group full-width">
           <label>Email:</label>
-          <input type="email" name="email" placeholder="Optional" />
+          <input class="text-gray-500" type="email" name="email" placeholder="Optional" />
         </div>
       </div>
 
@@ -98,3 +91,4 @@
     or authorized intermediaries. Prices are indicative and subject to negotiation.</p>
 </div>
 <app-floating-whatsapp></app-floating-whatsapp>
+<app-footer3></app-footer3>

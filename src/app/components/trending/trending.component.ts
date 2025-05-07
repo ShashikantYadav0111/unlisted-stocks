@@ -22,20 +22,20 @@ export class TrendingComponent {
 
   companies = [
     {
-      name: 'Lava International',
-      sector: 'Consumer Durables',
-      image: './trending/lava.webp',
+      name: 'Chennai Super Kings',
+      sector: 'Sports',
+      image: './trending/csk.png',
     },
     {
-      name: 'B9 Beverages (BIRA 91)',
-      sector: 'FMCG',
-      image: './trending/bira.webp',
+      name: 'Taparia Tools Limited',
+      sector: 'Manufacturing ',
+      image: './trending/taparia.webp',
     },
-    { name: 'Vikram Solar', sector: 'Energy', image: './trending/vikram.webp' },
+    { name: 'NSE India Limited', sector: 'Stock Exchange', image: './trending/nse.webp' },
     {
-      name: 'Imagine Marketing (boAt)',
-      sector: 'Consumer Durables',
-      image: './trending/boat.webp',
+      name: 'Metropolitan Stock Exchange',
+      sector: 'Stock Exchange',
+      image: './trending/metro.webp',
     },
     {
       name: 'Oravel Stays (OYO Rooms)',
@@ -48,9 +48,9 @@ export class TrendingComponent {
       image: './trending/hdb.webp',
     },
     {
-      name: 'API Holdings(Pharmeasy)',
+      name: 'Philips India',
       sector: 'Health Care',
-      image: './trending/pharmeasy.webp',
+      image: './trending/philips.webp',
     },
     {
       name: 'SBI Funds Management',
