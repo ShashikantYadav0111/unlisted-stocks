@@ -8,8 +8,8 @@
   color: black;
   background: white;
   position: sticky;
-  top: 1.3rem;
-  z-index: 1000;
+  top: 0rem;
+  z-index: 5000;
 }
 
 .logo {
@@ -119,7 +119,7 @@
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
-    z-index: 2000;
+    z-index: 5000;
   }
 
   .nav-links ul {

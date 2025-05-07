@@ -46,9 +46,9 @@
 </section>
 <!-- <app-section></app-section> -->
 
-<div class="table">
-  <h1>Some of Deals We've Facilitated</h1>
 
+<div class="table-responsive animated-gradient-border">
+  <h1 class="table-title" style="font-size: 2rem; text-align: center;">Some of Deals We’ve Facilitated</h1>
   <table class="company-table">
     <thead>
       <tr>
@@ -59,49 +59,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><strong>NSE India Ltd</strong></td>
-        <td>Capital Markets</td>
-        <td>Buy-side</td>
-        <td><span class="status"><span class="tick">&#9989;</span> Executed</span></td>
+ 
+      <tr *ngFor="let deal of deals">
+        <td data-label="Company"><strong>{{deal.company}}</strong></td>
+        <td data-label="Sector">{{deal.sector}}</td>
+        <td data-label="Deal Type">{{deal.dealType}}</td>
+        <td data-label="Status"><span class="status"><span class="tick">✅</span> {{deal.status}}</span></td>
       </tr>
-      <tr>
-        <td><strong>OYO Rooms</strong></td>
-        <td>Hospitality</td>
-        <td>Sell-side</td>
-        <td><span class="status"><span class="tick">&#9989;</span> Booked</span></td>
-      </tr>
-      <tr>
-        <td><strong>MSEI (Metropolitan Exchange)</strong></td>
-        <td>Financial Infra</td>
-        <td>Buy-side</td>
-        <td><span class="status"><span class="tick">&#9989;</span> Closed</span></td>
-      </tr>
-      <tr>
-        <td><strong>Polymatech</strong></td>
-        <td>Semiconductor</td>
-        <td>Internal Inventory</td>
-        <td><span class="status"><span class="tick">&#9989;</span> Sold</span></td>
-      </tr>
+   
+      <!-- etc. -->
     </tbody>
   </table>
 </div>
-
-
-<section class="opportunity-section">
-  <div class="opportunity-content">
-    <p class="opportunity-highlight">
-      Explore curated private market opportunities backed by research and internal sourcing.
-    </p>
-    <p>
-      This screener is <strong>not a trading platform</strong>. Prices and availability are subject to change and are based on off-market negotiations and in-house inventory.
-    </p>
-    <div class="cta">
-      <span>📌 Want to participate?</span>
-      <button (click)="navigateTo('/contact')" class="cta-button">Click Here</button>
-    </div>
-  </div>
-</section>
 
 <app-testimonials></app-testimonials>
 <div class="disclaimer">

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import * as AOS from 'aos';
 
 @Component({
@@ -9,6 +10,8 @@ import * as AOS from 'aos';
   styleUrl: './trending.component.scss',
 })
 export class TrendingComponent {
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
     AOS.init({
@@ -65,4 +68,8 @@ export class TrendingComponent {
       image: './trending/tata.webp',
     },
   ];
+
+  navigateTo(page: string) {
+    this.router.navigate([page]);
+  }
 }

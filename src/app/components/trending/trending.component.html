@@ -1,38 +1,5 @@
-<!-- <div class="trending-container-web" >
-    <div class="trending-card" *ngIf="currentStock">
-        <div class="details">
-                <img src="{{currentStock.logo}}" alt="">
-            <div class="dets">
-                <h3>{{currentStock.company_name}} </h3>
-                <h4>Sector: {{currentStock.sector}} </h4>
-            </div>
-        </div>
-        <div class="more-details">
-            <div class="description">
-                <h2>{{currentStock.description}}</h2>
-            </div>
-            <div class="highlight">
-                <h2>Highlights</h2>
-                <ul>
-                    <li *ngFor="let highlight of currentStock.highlights">{{highlight}}</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="trending-container-mobile" >
-    <div class="trending-card" *ngIf="currentStock">
-        <div class="details">
-                <img src="{{currentStock.logo}}" alt="">
-            <div class="dets">
-                <h3>{{currentStock.company_name}} </h3>
-                <h3>Sector:{{currentStock.sector}} </h3>
-            </div>
-        </div>
-        
-</div> -->
-<div class="card-container">
+<div class="card-container" (click)="navigateTo('screener')">
     <div data-aos="zoom-in" class="card" *ngFor="let company of companies ">
         <img src="{{company.image}}" alt="">
         <div class="text">

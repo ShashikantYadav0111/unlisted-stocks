@@ -38,6 +38,33 @@ export class AboutComponent {
     },
   ];
 
+  deals = [
+    {
+      company: "NSE India Ltd",
+      sector: "Capital Markets",
+      dealType: "Buy‑side",
+      status: "Executed"
+    },
+    {
+      company: "OYO Rooms",
+      sector: "Hospitality",
+      dealType: "Sell‑side",
+      status: "Booked"
+    },
+    {
+      company: "MSEI (Metropolitan Exchange)",
+      sector: "Financial Infra",
+      dealType: "Buy‑side",
+      status: "Closed"
+    },
+    {
+      company: "Polymatech",
+      sector: "Semiconductor",
+      dealType: "Internal Inventory",
+      status: "Sold"
+    }
+  ];
+  
   constructor(private router: Router) {}
 
   navigateTo(path: string) {

@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
 })
 export class StatisticsComponent {
   stats = [
-    { value: '15+', label: 'Years Experience' },
-    { value: '200+', label: 'Happy Customers' },
-    { value: '150+', label: 'Deals Facilitated' },
+    { value: '10+', label: 'Years Experience' },
+    { value: '2000+', label: 'Happy Customers' },
+    { value: '1100+', label: 'Deals Facilitated' },
     { value: '98%', label: 'Client Satisfaction' }
   ];
 }

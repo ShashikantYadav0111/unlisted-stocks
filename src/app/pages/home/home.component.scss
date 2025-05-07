@@ -1,6 +1,6 @@
 .ticker-container {
   position: sticky;
-  top: 5.1rem;
+  top: 3.5rem;
   z-index: 1000;
 }
 
@@ -54,7 +54,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  padding: 0rem 4rem;
   opacity: 2;
   background-color: #f0f4f8;
   .heading-text{
@@ -415,11 +415,47 @@
 
 
 .disclaimer {
-  padding: 1rem;
+  margin: 0rem auto;
+  animation: highlighter 1.5s ease-in-out infinite;
+  width: 80vw;
   P {
+    text-align: center;
     padding: 1rem;
-    border-left: 5px solid rgb(255, 0, 0);
     background-color: rgba(0, 0, 0, 0.09);
-    color: rgb(111, 109, 109);
+    color: rgb(15, 15, 15);
+  }
+  border: 3px solid red;
+}
+
+@keyframes highlighter{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+
+.animated-border {
+  padding: 0rem;
+  width: 80vw;
+  border: 5px solid transparent;
+  border-image: linear-gradient(45deg, #ff0080, #7928ca, #2afadf, #ff0080);
+  border-image-slice: 1;
+  animation: gradientRotate 5s linear infinite;
+  background: white; /* inner content background */
+}
+
+@keyframes gradientRotate {
+  0% {
+    border-image-source: linear-gradient(45deg, #ff0080, #7928ca, #2afadf, #ff0080);
+    
+  }
+  100% {
+    border-image-source: linear-gradient(405deg, #ff0080, #7928ca, #2afadf, #ff0080);
   }
 }

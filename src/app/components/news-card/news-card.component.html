@@ -5,11 +5,12 @@
   
   <div class="news-content">
     <h3 class="news-title">{{ newItem.title }}</h3>
-    <p class="news-description">{{ newItem.description }}</p>
+    <p class="news-description">{{ newItem.description | truncate:100 }}</p>
 
     <div class="news-meta">
-      <span class="news-likes">❤️ {{newItem.likes }}</span>
-      <span class="news-views">👁️ {{ newItem.views }}</span>
+      <span>{{newItem.date | date:'mediumDate'}}</span>
+      <span style="border: 2px solid rgb(187, 187, 187);padding:0.1rem 1rem;border-radius: 10px;" (click)="updateLike(newItem._id)" class="news-likes">❤️ {{newItem.likes }}</span>
+      <!-- <span class="news-views">👁️ {{ newItem.views }}</span> -->
     </div>
 
     <a [href]="newItem.newsUrl" class="read-more" target="_blank" rel="noopener">Read More →</a>

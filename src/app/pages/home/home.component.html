@@ -1,6 +1,5 @@
-<!-- <h1>testing branch</h1> -->
 
-<div class="ticker-container" >
+<div class="ticker-container" (click)="navigateTo('screener')" >
   <app-ticker></app-ticker>
 </div>
 <div class="home-container-mobile">
@@ -12,10 +11,10 @@
   </header>
 
   <div class="image-holder">
-    <img src="./backgrounds/background1.png" alt="Invest in private companies" />
+    <img src="./hero.jpg" alt="Invest in private companies" />
   </div>
 
-  <div class="about-btn">
+  <div class="about-btn" style="margin-top: 3rem;">
     <a class="btn" routerLink="/about" aria-label="Learn more about us">Learn More</a>
   </div>
 </div>
@@ -57,7 +56,7 @@
 
 
 <app-floating-whatsapp></app-floating-whatsapp>
-  <div class="disclaimer">
+  <div class="disclaimer ">
     <p><strong>Disclaimer:</strong> 📌 Not a trading platform. All investments are routed through
       authorized
       intermediaries or in-house execution.</p>

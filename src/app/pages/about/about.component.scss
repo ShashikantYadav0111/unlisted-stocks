@@ -1,5 +1,4 @@
 .banner {
-  width: 100vw;
   height: 15vw;
   background: linear-gradient(45deg,white,rgb(244, 250, 205),rgb(226, 184, 241),rgb(255, 169, 193));
   position: relative;
@@ -88,25 +87,39 @@
   }
 }
 
-
 .disclaimer {
-  padding: 1rem;
-  p {
+  margin: 0rem auto;
+  animation: highlighter 1.5s ease-in-out infinite;
+  width: 80vw;
+  P {
+    text-align: center;
     padding: 1rem;
-    border-left: 5px solid rgb(255, 0, 0);
     background-color: rgba(0, 0, 0, 0.09);
-    color: rgb(111, 109, 109);
+    color: rgb(15, 15, 15);
+  }
+  border: 3px solid red;
+}
+
+@keyframes highlighter{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
   }
 }
 
 .table {
+  margin: 0rem auto;
   padding: 2rem 2rem;
   background: linear-gradient(135deg, #ffffff, #f3f4f6);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: "Arial", sans-serif;
   color: #2c3e50;
-  margin-bottom: 40px;
 }
 .company-table {
   width: 100%;
@@ -367,5 +380,88 @@
 
   .cta-button {
     width: 100%;
+  }
+}
+
+.table-responsive {
+  position: relative;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #fff;
+  overflow: hidden;
+}
+.animated-gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -3px; left: -3px; right: -3px; bottom: -3px;
+  background: linear-gradient(270deg, #ff0080, #7928ca, #2afadf, #ff0080);
+  background-size: 600% 600%;
+  border-radius: 14px;
+  z-index: -1;
+  animation: gradientBorderAnim 6s ease infinite;
+}
+@keyframes gradientBorderAnim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* table base */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.company-table th,
+.company-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1.1rem;
+}
+.company-table th {
+  background: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.company-table tbody tr:nth-child(even) { background: #fafafa; }
+.company-table tbody tr:hover       { background: #f1f1f1; }
+
+/* mobile: turn into “cards” */
+@media (max-width: 600px) {
+  .company-table,
+  .company-table thead,
+  .company-table tbody,
+  .company-table th,
+  .company-table td,
+  .company-table tr {
+    display: block;
+  }
+  .company-table thead { display: none; }
+  .company-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+  .company-table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+  }
+  .company-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  .company-table td:last-child {
+    border-bottom: none;
   }
 }
