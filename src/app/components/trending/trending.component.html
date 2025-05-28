@@ -1,7 +1,7 @@
 
 <div class="card-container" (click)="navigateTo('screener')">
-    <div data-aos="zoom-in" class="card" *ngFor="let company of companies ">
-        <img src="{{company.image}}" alt="">
+    <div data-aos="zoom-in" class="card flex flex-row  justify-around" *ngFor="let company of companies ">
+        <img class="h-15 w-15 " src="{{company.image}}" alt="">
         <div class="text">
             <h3>{{company.name}}</h3>
             <h5>Sector:{{company.sector}}</h5>

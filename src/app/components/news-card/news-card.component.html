@@ -1,7 +1,7 @@
 
 
 <div class="news-card">
-  <img [src]="newItem.imageUrl" alt="News Image" class="news-image" />
+  <img [src]="newItem.imageUrl" alt="News Image" class="news-image" loading="lazy"/>
   
   <div class="news-content">
     <h3 class="news-title">{{ newItem.title }}</h3>
@@ -13,6 +13,6 @@
       <!-- <span class="news-views">👁️ {{ newItem.views }}</span> -->
     </div>
 
-    <a [href]="newItem.newsUrl" class="read-more" target="_blank" rel="noopener">Read More →</a>
+    <a [href]="newItem.newsUrl" style="padding: 0.5rem;" class="read-more hover:border-1 border-blue rounded-md " target="_blank" rel="noopener">Read More →</a>
   </div>
 </div>

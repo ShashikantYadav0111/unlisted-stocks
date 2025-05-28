@@ -18,8 +18,8 @@ interface News{
   providedIn: 'root',
 })
 export class NewsService {
-  private readonly API_URL = 'https://stockapp-backend-1at5.onrender.com/news/get-all';
-  // private readonly API_URL = 'http://localhost:3000/news/get-all';
+  private readonly API_URL = 'https://stockapp-backend-1at5.onrender.com/news';
+  // private readonly API_URL = 'http://localhost:3000/news';
   private readonly STORAGE_KEY = 'cachedNews';
 
   // 1) Our in‑memory store:
@@ -34,7 +34,7 @@ export class NewsService {
   /** Fetch from API and update the store */
   fetchNews(): any{
     this.http
-      .get<News[]>(this.API_URL)
+      .get<News[]>(`${this.API_URL}/get-all`)
       .pipe(
         tap((news) => {
           this.newsSubject.next(news);
@@ -48,16 +48,23 @@ export class NewsService {
       .subscribe();
   }
 
-  addOneNews(paylod: any) {
-    this.http.post('https://stockapp-backend-1at5.onrender.com/news/add-one',paylod);
-    // this.http.post('http://localhost:3000/news/add-one', paylod);
+  addOneNews(payload: any) {
+    this.http.post(`${this.API_URL}/add-one`, payload).subscribe(response=>{
+      console.log(response);
+    })
     this.fetchNews();
   }
 
   updateNews(id: string):Observable<News[]> {
-    // this.http.post('https://stockapp-backend-1at5.onrender.com/news/update-one',id);
     return this.http
-      .post<News[]>('https://stockapp-backend-1at5.onrender.com/news/update-one', { id })
+      .post<News[]>(`${this.API_URL}/update-one`, { id })
+      .pipe(
+        tap(() => this.fetchNews())
+      );
+  }
+  deleteNews(id: string):Observable<News[]> {
+    return this.http
+      .post<News[]>(`${this.API_URL}/delete`, { id })
       .pipe(
         tap(() => this.fetchNews())
       );

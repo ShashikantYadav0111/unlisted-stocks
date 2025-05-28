@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 })
 export class Footer3Component {
   contactInfo2 = { 
-    phoneNo:'+91 9814003436',
+    phoneNo:'+91 120 311 6517',
     email:'unlistedequities@gmail.com',
     address:''
   }

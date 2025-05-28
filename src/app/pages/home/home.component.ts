@@ -9,7 +9,6 @@ import { FloatingWhatsappComponent } from "../../components/floating-whatsapp/fl
 import { WhyComponent } from '../../components/why/why.component';
 import { StatisticsComponent } from '../../components/statistics/statistics.component';
 import { ProcessComponent } from '../../components/process/process.component';
-import { DiscComponent } from '../disc/disc.component';
 import { DisclaimerComponent } from '../../components/disclaimer/disclaimer.component';
 import { Footer3Component } from '../../components/footer3/footer3.component';
 
@@ -25,7 +24,7 @@ import { Footer3Component } from '../../components/footer3/footer3.component';
     FloatingWhatsappComponent,
     WhyComponent,
     ProcessComponent,
-    Footer3Component
+    Footer3Component,
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

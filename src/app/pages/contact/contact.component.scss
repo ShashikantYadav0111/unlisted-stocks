@@ -55,3 +55,47 @@
     height: 200px;
   }
 }
+
+.banner {
+  background: linear-gradient(45deg,rgb(2, 2, 2),rgb(11, 11, 9),rgb(18, 13, 20),rgb(0, 0, 0));
+  position: relative;
+  background-size: 300% 300%;
+  display: flex;
+  padding: 3rem;
+  animation:gradientAnimation 10s ease infinite ;
+  @media (max-width:768px) {
+    padding: 1rem;
+  }
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.highlight{
+  animation: highlighter 2s ease-in-out infinite ;
+}
+
+@keyframes highlighter{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.02);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@media (max-width:768px) {
+  .top{
+    width: 90%;
+  }
+}

@@ -1,6 +1,6 @@
 <div class="contact-container">
   <div style="padding: 1rem;" class="hidden sm:flex contact-image flex-col gap-2">
-    <div class="top w-full h-1/2 flex flex-row gap-2">
+    <div class="top h-1/2 flex flex-row gap-2">
       <img class="w-1/2 rounded-xl border-3 border-[#1b263b]" src="./backgrounds/background1.png" alt="">
       <div style="padding: 1.5rem 1.5rem;" class="bg-[#1b263b] rounded-xl">
         <h1 class="font-bold text-white text-sm sm:text-3xl ">We're Here to Answer All Your Questions Promptly and
@@ -16,38 +16,58 @@
       <div class="contact-header">
         <h1 class="text-white text-lg">Contact Us</h1>
       </div>
-      <div  class="contact-form border rounded-xl bg-white">
-        <form [formGroup]="contactForm" (ngSubmit)="handleSubmit()" style="padding: 0.25rem 0.5rem;"
-          class="flex flex-col gap-2 rounded-md">
+      <div style="padding: 0.5rem 2rem;margin: 0.5rem; " class="highlight w-70 sm:w-full banner h-20 sm:h-15 flex flex-col sm:flex-row items-center sm:gap-10 sm:justify-between border-2 border-white text-white font-bold text-lg p-2 rounded-xl">
+        <span class="flex items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd"
+              d="m3.855 7.286 1.067-.534a1 1 0 0 0 .542-1.046l-.44-2.858A1 1 0 0 0 4.036 2H3a1 1 0 0 0-1 1v2c0 .709.082 1.4.238 2.062a9.012 9.012 0 0 0 6.7 6.7A9.024 9.024 0 0 0 11 14h2a1 1 0 0 0 1-1v-1.036a1 1 0 0 0-.848-.988l-2.858-.44a1 1 0 0 0-1.046.542l-.534 1.067a7.52 7.52 0 0 1-4.86-4.859Z"
+              clip-rule="evenodd" />
+          </svg>
+          {{ contact.phone }}
+        </span>
+        <span class="flex items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path
+              d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+            <path
+              d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+          </svg>
+          {{ contact.email }}
+        </span>
+      </div>
+      
+      <div class="contact-form border rounded-xl bg-white">
+        <form style="padding: 0.25rem 0.5rem;" class="flex flex-col gap-2 rounded-md"
+          action="https://formsubmit.co/unlistedequities@gmail.com" method="POST">
           <div class="flex flex-col sm:flex-row gap-2">
             <div class="form-group w-full sm:w-1/2 flex flex-col gap-1">
               <label style="padding: 0.75rem 0rem;" for="name" class="sm:text-xl text-[#1b263b] font-bold">Name</label>
-              <input formControlName="name" style="padding: 0.25rem 0.5rem;"
+              <input style="padding: 0.25rem 0.5rem;"
                 class="text-sm h-12 text-gray-500 border-2 border-gray-500 rounded-md focus:outline-none focus:border-blue-900 focus:border-2 px-4 py-2"
                 type="text" id="name" name="name" placeholder="Your Name" required />
             </div>
             <div class="form-group w-full sm:w-1/2 flex flex-col gap-1">
               <label style="padding: 0.75rem 0rem;" for="name" class="text-[#1b263b] sm:text-xl font-bold">Phone</label>
-              <input formControlName="phone" style="padding: 0.25rem 0.5rem;"
+              <input style="padding: 0.25rem 0.5rem;"
                 class="text-sm h-12 text-gray-500 border-2 border-gray-500 rounded-md focus:outline-none focus:border-blue-900 focus:border-2 px-4 py-2"
                 type="tel" id="phone" name="phone" placeholder="Your Phone No." required />
             </div>
           </div>
-          <div  class="form-group flex flex-col gap-1">
+          <div class="form-group flex flex-col gap-1">
             <label style="padding: 0.75rem 0rem;" for="name" class="text-[#1b263b] sm:text-xl font-bold">Email</label>
-            <input formControlName="email" style="padding: 0.75rem 0.5rem;"
+            <input style="padding: 0.75rem 0.5rem;"
               class="text-sm h-12 text-gray-500 border-2 border-gray-500 rounded-md focus:outline-none focus:border-blue-900 focus:border-2 px-4 py-2"
               type="email" id="email" name="email" placeholder="abc@mail.com" required />
           </div>
 
           <div class="form-group flex flex-col gap-1">
-            <label style="padding: 1rem 0.5rem;" for="message" class="text-[#1b263b] sm:text-xl font-bold">Message</label>
-            <textarea formControlName="message" style="padding: 0.75rem 0.5rem;" id="message" name="message" rows="4"
+            <label style="padding: 1rem 0.5rem;" for="message"
+              class="text-[#1b263b] sm:text-xl font-bold">Message</label>
+            <textarea style="padding: 0.75rem 0.5rem;" id="message" name="message" rows="4"
               class="text-sm text-gray-500 border-2 border-gray-500 rounded-md focus:outline-none focus:border-blue-900 focus:border-2 px-4 py-2"
               placeholder="How can we help you?" required></textarea>
           </div>
-          <button [disabled]="contactForm.invalid" (click)="handleSubmit()"
-            style="padding: 0.75rem 0.5rem;margin: 1rem auto;" type="submit"
+          <button (click)="handleSubmit()" style="padding: 0.75rem 0.5rem;margin: 1rem auto;" type="submit"
             class="w-30 submit-btn bg-[#1b263b] text-white font-bold rounded-md">Submit</button>
         </form>
       </div>

@@ -1,5 +1,5 @@
 
-<div class="hot-deals-banner" (click)="showForm = true">
+<div class="hot-deals-banner" (click)="handleClick()">
   GET HOT DEALS At best price - Click Here!!
 </div>
 <div class="screener-container">
@@ -18,37 +18,36 @@
     <input type="text" placeholder="Search stocks..." [(ngModel)]="searchQuery" (input)="applyFilters()"
   class="search-box" />
     <table class="stock-table">
-      <thead>
-        <tr>
-          <th>Stock Name</th>
-          <th>Current Price</th>
-          <th>M.Cap(Cr)</th>
-          <th>P/E</th>
-          <th>ROCE</th>
-          <th>ROE</th>
-          <th>QUOTE</th>
-
-        </tr>
-      </thead>
-      <tbody class="table-body">
-        <tr *ngFor="let stock of filteredStocks">
-          <td>{{ stock.name }}</td>
-          <td>₹{{ stock.price }}</td>
-          <td>₹{{ stock.mcap }}</td>
-          <td>{{ stock.pe }}</td>
-          <td>{{ stock.roce || 'NA' }}</td>
-          <td>{{ stock.roe }}</td>
-          <td><button (click)="showForm = true" class="btn">Get Quote</button></td>
-        </tr>
-      </tbody>
-    </table>
+    <thead>
+      <tr>
+        <th>Stock Name</th>
+        <th>Current Price</th>
+        <th>M.Cap(Cr)</th>
+        <th>P/E</th>
+        <th>ROCE</th>
+        <th>ROE</th>
+        <th>QUOTE</th>
+      </tr>
+    </thead>
+    <tbody class="table-body">
+      <tr *ngFor="let stock of filteredStocks">
+        <td data-label="Stock Name">{{ stock.name }}</td>
+        <td data-label="Current Price">₹{{ stock.price }}</td>
+        <td data-label="M.Cap(Cr)">₹{{ stock.mcap }}</td>
+        <td data-label="P/E">{{ stock.pe }}</td>
+        <td data-label="ROCE">{{ stock.roce || 'NA' }}</td>
+        <td data-label="ROE">{{ stock.roe }}</td>
+        <td data-label="QUOTE"><button (click)="handleClick()" class="btn">Get Quote</button></td>
+      </tr>
+    </tbody>
+  </table>
   </div>
 </div>
 <!-- Trigger Button -->
 
 
 <!-- Form Modal -->
-<div *ngIf="showForm" class="overlay">
+<!-- <div *ngIf="showForm" class="overlay">
   <div class="form-popup">
     <h2>Please Fill The Form</h2>
     <h3 style="color: var(--secondary-color);">We Are Just One Call Away</h3>
@@ -61,7 +60,7 @@
       <p [ngStyle]="{fontSize:'1.25rem'}"><i class="fas fa-phone"></i> {{contactInfo2.phoneNo}}</p>
     </div>
 
-    <form action="https://formsubmit.co/unlistedequities@gmail.com" method="POST">
+    <form action="https://formsubmit.co/crowm@gmail.com" method="POST">
       <div class="form-grid">
         <div class="form-group">
           <label>Full Name:</label>
@@ -74,7 +73,7 @@
 
         <div class="form-group full-width">
           <label>Email:</label>
-          <input class="text-gray-500" type="email" name="email" placeholder="Optional" />
+          <input class="text-gray-500" type="email" name="email" placeholder="Your Email" />
         </div>
       </div>
 
@@ -84,7 +83,7 @@
       </div>
     </form>
   </div>
-</div>
+</div> -->
 <div class="disclaimer">
   <p><strong>Disclaimer:</strong> This screener is for informational and exploratory purposes only. UnlistedEquities
     does not facilitate direct trading. All transactions, if initiated, are privately executed via our proprietary desk

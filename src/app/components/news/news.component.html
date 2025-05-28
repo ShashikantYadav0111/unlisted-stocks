@@ -1,6 +1,7 @@
 <h2>📰 Latest News on Unlisted Stocks</h2>
 <div class="news-container">
-    <ul class="news-list">
+  <app-loader *ngIf="!flag"></app-loader>
+    <ul class="news-list" *ngIf="flag">
       <li *ngFor="let item of newsItems">
         <app-news-card [newItem]="item"></app-news-card>
       </li>

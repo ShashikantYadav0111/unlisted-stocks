@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './floating-whatsapp.component.scss'
 })
 export class FloatingWhatsappComponent {
-  whatsappNumber: string = '919814003436'; // <-- Change this to your number
+  whatsappNumber: string = '+918235467333'; // <-- Change this to your number
 
   get whatsappLink(): string {
     return `https://wa.me/${this.whatsappNumber}`;

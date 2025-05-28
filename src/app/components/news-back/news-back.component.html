@@ -1,0 +1,9 @@
+<div style="padding: 1rem;"  class="item w-80  border-2">
+    <div class="news-detail">
+        <span>Date: <strong>{{newsItem.date| date:'mediumDate'}} </strong></span>
+    </div>
+    <div>
+        <span>Title : <strong>{{newsItem.title | truncate:50 }}</strong></span>
+    </div>
+    <button class="w-25 h-7 border-2 cursor-pointer bg-yellow-500 rounded-md" (click)="deleteNews(newsItem._id)" >Delete</button>
+</div>

@@ -22,14 +22,14 @@ export class TrendingComponent {
 
   companies = [
     {
-      name: 'Chennai Super Kings',
-      sector: 'Sports',
-      image: './trending/csk.png',
+      name: 'TATA Capital',
+      sector: 'Financial Services',
+      image: './trending/tata.webp',
     },
     {
-      name: 'Taparia Tools Limited',
-      sector: 'Manufacturing ',
-      image: './trending/taparia.webp',
+      name: 'Vikram Solar',
+      sector: 'Energy',
+      image: './trending/vikram.webp',
     },
     { name: 'NSE India Limited', sector: 'Stock Exchange', image: './trending/nse.webp' },
     {
@@ -63,10 +63,20 @@ export class TrendingComponent {
       image: './trending/polymatech.webp',
     },
     {
-      name: 'TATA Capital',
-      sector: 'Financial Services',
-      image: './trending/tata.webp',
+      name: 'Chennai Super Kings',
+      sector: 'Sports',
+      image: './trending/csk.png',
     },
+    {
+      name: 'Taparia Tools Limited',
+      sector: 'Manufacturing ',
+      image: './trending/taparia.webp',
+    },
+    {
+      name: 'Bira Beverages (BIRA 91)',
+      sector: 'Consumer Staples',
+      image: './trending/bira.webp',
+    }
   ];
 
   navigateTo(page: string) {

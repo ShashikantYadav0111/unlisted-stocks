@@ -20,7 +20,7 @@ export class ContactComponent {
   contactForm!: FormGroup;
 
   contact={
-    phone:'+91 9814003436',
+    phone:'+91 120 311 6517',
     email:'unlistedequities@gmail.com'
   }
 

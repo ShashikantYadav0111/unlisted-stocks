@@ -26,3 +26,8 @@
     background-color: #ccc;
     cursor: not-allowed;
   }
+
+  .list{
+    overflow: scroll;
+    overflow-x: hidden;
+  }

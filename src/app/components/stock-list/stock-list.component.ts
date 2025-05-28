@@ -5,10 +5,16 @@ import { HttpClient } from '@angular/common/http';
 import { FloatingWhatsappComponent } from '../floating-whatsapp/floating-whatsapp.component';
 import { StockService } from '../../services/stock.service';
 import { Footer3Component } from '../footer3/footer3.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-stock-list',
-  imports: [CommonModule, FormsModule, FloatingWhatsappComponent,Footer3Component],
+  imports: [
+    CommonModule,
+    FormsModule,
+    FloatingWhatsappComponent,
+    Footer3Component,
+  ],
   templateUrl: './stock-list.component.html',
   styleUrl: './stock-list.component.scss',
 })
@@ -62,13 +68,13 @@ export class StockListComponent {
     'DEFENCE',
     'HOLDINGS',
   ];
-  
+
   searchQuery = '';
 
-  constructor(private http: HttpClient, private stockService: StockService) {
-    stockService.stocks$.subscribe(response =>{
-      this.stocks = response
-    })
+  constructor(private http: HttpClient, private stockService: StockService,private router:Router) {
+    stockService.stocks$.subscribe((response) => {
+      this.stocks = response;
+    });
     this.applyFilters();
   }
 
@@ -87,5 +93,10 @@ export class StockListComponent {
         this.selectedSectors.includes(stock.sector.toUpperCase());
       return matchSearch && matchSector;
     });
+  }
+  form = { fullname: '', phoneNo: '', email: '' };
+
+  handleClick() {
+      this.router.navigate(['/contact']);
   }
 }
