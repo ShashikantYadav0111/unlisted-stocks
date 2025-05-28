@@ -29,7 +29,6 @@ export class StockBackComponent {
     }
   }
    deleteStock(id:string){
-    console.log(id)
     this.stockService.deleteStock({id});
   }
 }

@@ -1,5 +1,8 @@
 <div class="backend-container">
-  <div class="news-container flex flex-row">
+   <h2 class="text-4xl font-semibold text-center bg-blue-100" style="margin: 20px;">
+      News 
+    </h2>
+  <div style="margin:auto 1rem;" class="news-container flex flex-row">
     <div class="news w-2/5">
       <h1 style="margin: 1rem;" class="font-bold text-center text-2xl">Add News</h1>
       <form style="padding: 1rem;" [formGroup]="articleForm" (ngSubmit)="onSubmitNews()"
@@ -35,14 +38,16 @@
   </div>
 </div>
 <hr>
-<div class="stock-container flex flex-row">
+ <h2 class="text-4xl font-semibold text-center bg-blue-100" style="margin: 20px;">
+      Stocks 
+    </h2>
+<div style="margin:auto 1rem;" class="stock-container flex flex-row">
   <div style="margin:1rem 0.5rem;" class="stock-form w-2/5">
     <h2 class="text-2xl font-semibold text-center" style="margin-bottom: 20px;">
-        Add New Stock
-      </h2>
-    <form [formGroup]="stockForm" (ngSubmit)="onSubmit()" class="border-2 max-w-2xl mx-auto bg-white shadow-md rounded-lg"
-      style="padding: 24px; margin-top: 40px;">
-      
+      Add New Stock
+    </h2>
+    <form [formGroup]="stockForm" (ngSubmit)="onSubmit()"
+      class="border-2 max-w-2xl mx-auto bg-white shadow-md rounded-lg" style="padding: 24px; margin: 40px;">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div *ngFor="let field of stockForm.controls | keyvalue">
           <label [for]="field.key" class="block text-sm font-medium text-gray-700 capitalize">
@@ -50,14 +55,12 @@
           </label>
 
           <input *ngIf="typeof field.value.value === 'number'" type="number" [formControlName]="field.key"
-            [id]="field.key"
-            [placeholder]="'Enter ' + field.key"
+            [id]="field.key" [placeholder]="'Enter ' + field.key"
             class="block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             style="margin-top: 4px; margin-bottom: 12px;" />
 
           <input *ngIf="typeof field.value.value === 'string'" type="text" [formControlName]="field.key"
-            [id]="field.key"
-            [placeholder]="'Enter ' + field.key"
+            [id]="field.key" [placeholder]="'Enter ' + field.key"
             class="block w-full text-gray-400 rounded-md border-gray-300  shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             style="margin-top: 4px; margin-bottom: 12px;" />
         </div>
@@ -69,18 +72,18 @@
     </form>
 
   </div>
-  <div  class="stock-list w-3/5 h-100 ">
-      <h1 style="margin:1rem 0.5rem;" class="font-bold text-center text-2xl">Stock Panel</h1>
-      <div style="padding: 1rem;" class="list w-9/10 h-125 flex flex-wrap gap-5  items-center justify-center">
-        <div *ngFor="let item of stocks">
-          <app-stock-back [stockItem]="item"></app-stock-back>
-        </div>
+  <div class="stock-list w-3/5 h-100 ">
+    <h1 style="margin:1rem 0.5rem;" class="font-bold text-center text-2xl">Stock Panel</h1>
+    <div style="padding: 1rem;" class="list w-9/10 h-125 flex flex-wrap gap-5  items-center justify-center">
+      <div *ngFor="let item of stocks">
+        <app-stock-back [stockItem]="item"></app-stock-back>
       </div>
     </div>
+  </div>
 </div>
 
 <hr>
-<div style="padding: 24px; margin-top: 40px;" class="max-w-3xl mx-auto bg-white shadow-md rounded-lg">
+<!-- <div style="padding: 24px; margin-top: 40px;" class="max-w-3xl mx-auto bg-white shadow-md rounded-lg">
   <h2 class="text-xl font-bold text-center mb-4">Add Multiple Stocks (JSON)</h2>
 
   <form (ngSubmit)="submitStocks()">
@@ -98,4 +101,20 @@
       Submit Stocks
     </button>
   </form>
+</div>
+<hr> -->
+ <h2 class="text-4xl font-semibold text-center" style="margin: 20px;">
+      Upload Excel File
+    </h2>
+<div style="padding: 5rem; margin: auto 1rem;" class="file-upload w-full flex flex-col items-center justify-center">
+
+  <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls" class="
+    block w-full text-sm text-gray-500
+    file:mr-4 file:py-2 file:px-4
+    file:rounded-md file:border-0
+    file:text-sm file:font-semibold
+    file:bg-blue-50 file:text-blue-700
+    hover:file:bg-blue-100
+    cursor-pointer
+  " />
 </div>
